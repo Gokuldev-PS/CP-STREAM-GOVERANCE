@@ -44,7 +44,7 @@ helm upgrade --install confluent-operator \
 Apply the Confluent Platform configuration:
 
 ```bash
-cd confluentplatform
+cd CP
 kubectl apply -f cp.yaml
 ```
 Check the status of pods:
