@@ -1,4 +1,4 @@
-<img width="2380" height="1310" alt="image (67)" src="https://github.com/user-attachments/assets/43451178-1c6d-48d4-bdf3-2eaf4edb846a" /># CP-DataQualityRulesDemo
+# CP-DataQualityRulesDemo
 
 This repository showcases a demo of **data quality rules** on the **Confluent Platform**.
 
@@ -156,8 +156,9 @@ Then copy the `pom.xml` and the Java producer class (`ProducerApp.java`) from th
 
 ### 📸 Producer Output Screenshot
 
-
-![Producer Output Screenshot](image67.png)
+<p align="center">
+  <img src="images/producer-output.png" alt="Producer Output Screenshot" width="600"/>
+</p>
 
 
 ---
