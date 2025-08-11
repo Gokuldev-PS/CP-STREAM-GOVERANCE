@@ -1,4 +1,4 @@
-# CP-DataQualityRulesDemo
+<img width="2380" height="1310" alt="image (67)" src="https://github.com/user-attachments/assets/43451178-1c6d-48d4-bdf3-2eaf4edb846a" /># CP-DataQualityRulesDemo
 
 This repository showcases a demo of **data quality rules** on the **Confluent Platform**.
 
@@ -60,9 +60,6 @@ Note down the load balancer endpoints for:
 1) Kafka Bootstrap
 2) REST Proxy
 3) Schema Registry
-
-<image src >
-
 
 
 
@@ -160,7 +157,7 @@ Then copy the `pom.xml` and the Java producer class (`ProducerApp.java`) from th
 ### 📸 Producer Output Screenshot
 
 ```md
-![Producer Output Screenshot](images/producer-output.png)
+![Producer Output Screenshot](image(67).png)
 ```
 
 ---
