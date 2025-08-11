@@ -55,10 +55,11 @@ Retrieve LoadBalancer endpoints:
 ```bash
 kubectl get services -n confluent
 ```
-You will need the endpoints for:
-1)Kafka Bootstrap
-2)REST Proxy
-3)Schema Registry
+Note down the load balancer endpoints for:
+
+1) Kafka Bootstrap
+2) REST Proxy
+3) Schema Registry
 
 <image src >
 
@@ -173,5 +174,5 @@ Then copy the `pom.xml` and the Java producer class (`ProducerApp.java`) from th
 
 ## 🎉 Happy Streaming!
 
-```
+
 
