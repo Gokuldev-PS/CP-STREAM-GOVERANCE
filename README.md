@@ -9,7 +9,7 @@ You can use an existing instance or a managed Kubernetes service like **AKS**, *
 
 ### 🔐 License Setup
 
-If you don’t have a Confluent license, you can remove the following section from your Confluent Platform (CP) config:
+If you don’t have a Confluent license, you can remove the following section from your Confluent Platform (CP) config :
 
 ```yaml
 spec:
