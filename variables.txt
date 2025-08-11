@@ -1,0 +1,8 @@
+REST_PROXY_HOST=""
+REST_PROXY_PORT=port number
+SCHEMA_REGISTRY_HOST=""
+SCHEMA_REGISTRY_PORT=port number
+CLUSTER_ID=""  # your actual cluster ID here
+SUCCESS_TOPIC=success
+DLQ_TOPIC=dlqtopic
+PARTITIONS=(3 3)
