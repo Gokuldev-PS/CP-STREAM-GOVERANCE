@@ -65,9 +65,124 @@ You will need the endpoints for:
 
 ---
 
-##  Step 2: Create Topics and Schemas
+Absolutely! Here's **Step 2 onward** in clean, fully formatted **Markdown** — ready for **copy-paste** directly into your `README.md`:
+
+---
+
+````md
+## 📘 Step 2: Create Topics and Schemas
 
 Navigate back to the root directory:
 
 ```bash
 cd ..
+````
+
+Update the `variable.txt` file with the endpoints retrieved in the previous step.
+
+Then run the setup script:
+
+```bash
+./setup.sh
+```
+
+This will create:
+
+* A **success** topic
+* A **DLQ (Dead Letter Queue)** topic
+* A **schema** with a data quality rule
+
+Use the **Confluent Control Center UI** to verify that the topics and schema have been created.
+
+---
+
+### ✅ Sample Schema and Rule
+
+This schema includes a rule that checks the length of the `ssn` field.
+If `ssn` is not exactly 9 characters long, the message is sent to the DLQ.
+
+```json
+{
+  "schemaType": "AVRO",
+  "schema": "{ \"type\": \"record\", \"name\": \"T4\", \"fields\": [ {\"name\": \"name\", \"type\": \"string\"}, {\"name\": \"email\", \"type\": \"string\"}, {\"name\": \"ssn\", \"type\": \"string\"} ] }",
+  "ruleSet": {
+    "domainRules": [
+      {
+        "name": "checkSsnLenTWEWT4",
+        "kind": "CONDITION",
+        "type": "CEL",
+        "mode": "WRITE",
+        "expr": "size(message.ssn) == 9",
+        "onFailure": "DLQ",
+        "params": {
+          "dlq.topic": "dlq-topic"
+        }
+      }
+    ]
+  }
+}
+```
+
+---
+
+## 🧪 Step 3: Test Using Java Producer
+
+You can test the setup using a Java-based Kafka producer (included in this repo) or a REST-based producer.
+
+Navigate to the Java producer project:
+
+```bash
+cd kafka-dlq-producer
+```
+
+Then compile and run the producer:
+
+```bash
+mvn clean compile exec:java -Dexec.mainClass=com.example.ProducerApp
+```
+
+This producer generates random records for testing the data quality rule.
+
+---
+
+### 🧱 Option: Create Maven Project from Scratch
+
+If you'd like to create your own Maven project:
+
+```bash
+mvn archetype:generate \
+  -DgroupId=com.example \
+  -DartifactId=kafka-dlq-producer \
+  -DarchetypeArtifactId=maven-archetype-quickstart \
+  -DinteractiveMode=false
+```
+
+Then copy the `pom.xml` and the Java producer class (`ProducerApp.java`) from this repository into the newly generated project.
+
+---
+
+### 📸 Producer Output Screenshot
+
+```md
+![Producer Output Screenshot](images/producer-output.png)
+```
+
+---
+
+## 📚 References
+
+* [Kafka REST API – Create a Topic](https://docs.confluent.io/platform/current/kafka-rest/api.html#create-a-topic)
+* [Schema Registry – Data Quality Rules](https://docs.confluent.io/platform/current/schema-registry/fundamentals/data-contracts.html#data-quality-rules)
+
+---
+
+## 🎉 Happy Streaming!
+
+```
+
+---
+
+✅ You can paste this from **`## Step 2` to the end** of your README.  
+Let me know if you want help inserting your actual screenshots or deploying this to GitHub.
+```
+
