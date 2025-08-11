@@ -141,7 +141,7 @@ Sure! Here's your rephrased text in Markdown format:
 
 If you encounter the error `b1.x cannot be resolved`, try the following:
 
-1. Perform an `nslookup` on the bootstrap endpoint to get the IP addresses of all brokers.
+1.Perform an `nslookup` on the load balancer endpoints. You can find these endpoints by running kubectl get services and locating kafka-1-lb, kafka-2-lb, and kafka-3-lb. Use their addresses for the lookup.
 2. Add these entries to your `/etc/hosts` file in the format:
 
 ```
