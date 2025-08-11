@@ -16,15 +16,7 @@ spec:
   license:
     secretRef: confluent-license
 ```
-### 🔐 License Setup
 
-If you don’t have a Confluent license, you can remove the following section from your Confluent Platform (CP) config:
-
-```yaml
-spec:
-  license:
-    secretRef: confluent-license
-```
 
 Then create a Kubernetes secret using the following command:
 ```yaml
