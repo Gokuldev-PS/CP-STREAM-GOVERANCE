@@ -87,7 +87,7 @@ public class ProducerApp {
         String schemaString = """
             {
               "type": "record",
-              "name": "plipplip",
+              "name": "t4",
               "fields": [
                 {"name": "name", "type": "string"},
                 {"name": "email", "type": "string"},
