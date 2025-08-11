@@ -1,6 +1,3 @@
-Of course! Here's the **full Markdown content** of your `README.md` file — cleanly formatted and ready to copy-paste in one go:
-
----
 
 ```md
 # CP-DataQualityRulesDemo
