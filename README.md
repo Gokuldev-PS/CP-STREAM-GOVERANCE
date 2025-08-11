@@ -19,6 +19,7 @@ spec:
 
 
 Then create a Kubernetes secret using the following command:
+
 ```yaml
 kubectl create secret generic confluent-license \
   --from-file=license.txt=./license.txt \
@@ -26,9 +27,6 @@ kubectl create secret generic confluent-license \
 ```
 
 
-### 🛠️ Install Confluent Operator
-
-```md
 ### 🛠️ Install Confluent Operator
 
 Add the Helm repo and install the Confluent Operator:
@@ -41,3 +39,35 @@ helm upgrade --install confluent-operator \
   confluentinc/confluent-for-kubernetes \
   --namespace confluent
 
+```
+
+Apply the Confluent Platform configuration:
+
+```bash
+cd confluentplatform
+kubectl apply -f cp.yaml
+```
+Check the status of pods:
+```bash
+kubectl get pods -n confluent
+```
+Retrieve LoadBalancer endpoints:
+```bash
+kubectl get services -n confluent
+```
+You will need the endpoints for:
+1)Kafka Bootstrap
+2)REST Proxy
+3)Schema Registry
+
+<image src >
+
+
+---
+
+##  Step 2: Create Topics and Schemas
+
+Navigate back to the root directory:
+
+```bash
+cd ..
