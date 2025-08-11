@@ -157,7 +157,7 @@ Then copy the `pom.xml` and the Java producer class (`ProducerApp.java`) from th
 ### 📸 Producer Output Screenshot
 
 <p align="center">
-  <img src="images/producer-output.png" alt="Producer Output Screenshot" width="600"/>
+  <img src="producer-output.png" alt="Producer Output Screenshot" width="600"/>
 </p>
 
 
