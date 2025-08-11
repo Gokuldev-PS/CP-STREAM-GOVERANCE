@@ -63,13 +63,8 @@ You will need the endpoints for:
 <image src >
 
 
----
 
-Absolutely! Here's **Step 2 onward** in clean, fully formatted **Markdown** — ready for **copy-paste** directly into your `README.md`:
 
----
-
-````md
 ## 📘 Step 2: Create Topics and Schemas
 
 Navigate back to the root directory:
@@ -171,18 +166,12 @@ Then copy the `pom.xml` and the Java producer class (`ProducerApp.java`) from th
 
 ## 📚 References
 
-* [Kafka REST API – Create a Topic](https://docs.confluent.io/platform/current/kafka-rest/api.html#create-a-topic)
-* [Schema Registry – Data Quality Rules](https://docs.confluent.io/platform/current/schema-registry/fundamentals/data-contracts.html#data-quality-rules)
+* https://docs.confluent.io/platform/current/kafka-rest/api.html#create-a-topic
+* https://docs.confluent.io/platform/current/schema-registry/fundamentals/data-contracts.html#data-quality-rules
 
 ---
 
 ## 🎉 Happy Streaming!
 
-```
-
----
-
-✅ You can paste this from **`## Step 2` to the end** of your README.  
-Let me know if you want help inserting your actual screenshots or deploying this to GitHub.
 ```
 
