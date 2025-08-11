@@ -120,7 +120,8 @@ If `ssn` is not exactly 9 characters long, the message is sent to the DLQ.
 
 ## 🧪 Step 3: Test Using Java Producer
 
-You can test the setup using a Java-based Kafka producer (included in this repo) or a REST-based producer.
+You can test the setup using a Java-based Kafka producer (included in this repo) or a REST-based producer.Make sure to update the values.properties file with your broker’s and schema registry actual endpoints. 
+
 
 Navigate to the Java producer project:
 
@@ -133,6 +134,26 @@ Then compile and run the producer:
 ```bash
 mvn clean compile exec:java -Dexec.mainClass=com.example.ProducerApp
 ```
+
+Sure! Here's your rephrased text in Markdown format:
+
+### Tips
+
+If you encounter the error `b1.x cannot be resolved`, try the following:
+
+1. Perform an `nslookup` on the bootstrap endpoint to get the IP addresses of all brokers.
+2. Add these entries to your `/etc/hosts` file in the format:
+
+```
+
+ip1 b1.mytest.io
+ip2 b2.mytest.io
+ip3 b3.mytest.io
+
+```
+
+This will help your system resolve the broker hostnames correctly.
+
 
 This producer generates random records for testing the data quality rule.
 
