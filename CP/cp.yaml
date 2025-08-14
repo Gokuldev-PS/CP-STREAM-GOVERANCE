@@ -125,6 +125,9 @@ spec:
   image:
     application: confluentinc/cp-schema-registry:7.9.1
     init: confluentinc/confluent-init-container:2.11.1
+  configOverrides:
+    server:
+    - resource.extension.class=io.confluent.kafka.schemaregistry.rulehandler.RuleSetResourceExtension,io.confluent.dekregistry.DekRegistryResourceExtension
  
 ---
 apiVersion: platform.confluent.io/v1beta1

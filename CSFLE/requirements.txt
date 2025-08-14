@@ -1,0 +1,16 @@
+confluent-kafka
+attrs
+cachetools
+boto3
+cel-python>=0.1.5
+hkdf==0.0.3
+hvac
+jsonata-python
+pyyaml>=6.0.0
+faker
+httpx
+authlib
+tink
+referencing
+jsonschema
+python-dotenv
